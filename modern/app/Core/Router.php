@@ -17,7 +17,7 @@ class Router
         $urlPath = strtolower(trim(trim($urlPath, "/")));
 
         if (empty($urlPath)) {
-            $urlPath = 'home';
+            $urlPath = 'index';
         }
 
         require $this->root . '/' . $urlPath . '.php';
