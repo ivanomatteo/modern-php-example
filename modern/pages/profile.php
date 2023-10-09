@@ -1,5 +1,8 @@
 <?php
 
-dump(app()->config()->get('foo'));
+//dump(app()->config()->get('foo'));
 
-echo "profile page works";
+
+
+echo basename(__FILE__)." page works";
+

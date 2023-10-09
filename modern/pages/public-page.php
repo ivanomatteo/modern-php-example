@@ -1,4 +1,7 @@
 <?php
 
 
-echo "public page page works";
+
+echo basename(__FILE__)." page works";
+
+

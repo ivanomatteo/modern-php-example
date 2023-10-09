@@ -2,6 +2,8 @@
 
 
 
-dump(app()->make(App\Models\Person::class));
+//dump(app()->make(App\Models\Person::class));
 
-echo "index page works";
+
+
+echo basename(__FILE__)." page works";
