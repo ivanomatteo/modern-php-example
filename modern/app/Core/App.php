@@ -24,7 +24,8 @@ class App
     {
         $this->container = new Container();
 
-        $this->container->singleton(Config::class)->make(Config::class);
+        $this->container->singleton(Config::class)
+            ->make(Config::class); //force instantiate Config class
 
         $this->container
             ->singleton(Router::class, function () {
