@@ -12,6 +12,7 @@ class Container
 
     public function make(string $identifier)
     {
+
         if (($this->singletons[$identifier] ?? null) !== null) {
             return $this->singletons[$identifier];
         }
@@ -30,7 +31,8 @@ class Container
 
     private function create(string $identifier)
     {
-        $factory = $this->register[$identifier] ?? null;
+        $factory = $this->register[$identifier] ?? $identifier;
+     
         if (is_string($factory)) {
             if (class_exists($identifier)) {
                 return new $identifier;
@@ -53,7 +55,7 @@ class Container
         if ($factory) {
             $this->bind($identifier, $factory);
         }
-        $this->singletons[$identifier] = true;
+        $this->singletons[$identifier] = null;
         return $this;
     }
 }

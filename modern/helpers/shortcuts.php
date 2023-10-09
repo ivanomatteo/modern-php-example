@@ -31,3 +31,12 @@ function db(): DB
 {
     return app()->db();
 }
+
+function dd(...$val){
+    var_dump($val);
+    exit;
+}
+
+function dump(...$val){
+    var_dump($val);
+}

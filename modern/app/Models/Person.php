@@ -8,9 +8,13 @@ class Person
     private $name;
 
 
-    public function __construct($name)
+    function setName($name)
     {
         $this->name = $name;
+    }
+    function getName()
+    {
+        return $this->name;
     }
 
     function __toString()

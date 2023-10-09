@@ -2,6 +2,9 @@
 
 namespace App\Core;
 
+/** 
+ * @method mixed make(string $identifier)
+ */
 class App
 {
     // static singleton
@@ -46,5 +49,14 @@ class App
     public function db(): DB
     {
         return $this->container->make(DB::class);
+    }
+
+    public static function __callStatic($method, $args)
+    {
+        return call_user_func_array([static::getApp()->container, $method], $args);
+    }
+    public function __call($method, $args)
+    {
+        return call_user_func_array([$this->container, $method], $args);
     }
 }
