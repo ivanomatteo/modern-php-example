@@ -6,7 +6,11 @@ namespace App\Models;
 
 class Car
 {
-    private $name;
+    public function __construct(private $name)
+    {
+        $this->name = $name;
+    }
+
 
     function setName($name)
     {

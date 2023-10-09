@@ -5,8 +5,10 @@ namespace App\Models;
 
 class Person
 {
-    private $name;
-
+    public function __construct(private $name)
+    {
+        $this->name = $name;
+    }
 
     function setName($name)
     {
