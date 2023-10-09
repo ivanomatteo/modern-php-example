@@ -4,6 +4,7 @@ namespace App\Core;
 
 /** 
  * @method mixed make(string $identifier)
+ * @method mixed bind(string $identifier, string|Closure|callable $factory): Container
  */
 class App
 {
