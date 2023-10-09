@@ -4,7 +4,9 @@ namespace App\Core;
 
 class Config
 {
-    private array $cfg = [];
+    private array $cfg = [
+        'foo' => 'bar',
+    ];
 
     public function __construct()
     {
